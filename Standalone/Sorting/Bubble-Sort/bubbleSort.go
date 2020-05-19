@@ -1,6 +1,13 @@
+/*
+Simple Bubble Sort Algorithm in Go.
+File: bubbleSort.go
+Author: John M. Hamm
+Purpose: Stanford Algorithms Course. See readme why Go.
+*/
+
 package main //main for now to run each. will change to file name on build and fun from main.go
 
-import "fmt"
+import "fmt" //for print.
 
 func BubbleSort(arr []int, comp func(int, int) bool) {
 	size := len(arr)
@@ -21,7 +28,7 @@ func more(value1 int, value2 int) bool {
 }
 
 func main() {
-	data := []int{9, 1, 8, 2, 7, 3, 6, 4, 5}
+	data := []int{9, 1, 8, 2, 7, 3, 6, 4, 5} //Can be any. This is just to test.
 	BubbleSort(data, more)
 	fmt.Println(data)
 }
